@@ -1,0 +1,10 @@
+^D:\OWON\BUILD\CMAKEFILES\C955D862C531B9E880E935916DD6BFB0\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Owon -BD:/Owon/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/Owon/build/Owon1041.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
