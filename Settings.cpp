@@ -1,7 +1,6 @@
 #include "Settings.h"
 
 #include <iostream>
-#include <__ostream/basic_ostream.h>
 
 Settings::Settings(QObject *parent)
     : QSettings(parent) {

@@ -9,7 +9,6 @@
 #include <QComboBox>
 #include <QPushButton>
 #include <QLabel>
-#include <__ostream/basic_ostream.h>
 
 ConnectDialog::ConnectDialog(QWidget *parent)
     : QDialog(parent), serialPort(nullptr) {

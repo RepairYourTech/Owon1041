@@ -17,18 +17,18 @@ This application provides a graphical interface for controlling and retrieving m
 
 (Screenshots will be added here)
 
-## Pre-compiled Binary
+## Running the Application
 
-For Windows users who want to run the application without compiling it, a pre-compiled executable is included in the `bin` directory.
+After building the application, you can run it directly from the `build/Release` directory. A shortcut `Owon1041.lnk` is provided in the root directory for convenience.
 
 ## Repository Structure
 
 This repository has two main branches:
 
 - `source-code-only`: Contains only the source code files needed for compilation
-- `main`: Contains the full project including compiled binaries
+- `main`: Contains the full project including build configurations
 
-If you are interested in just reviewing or modifying the code, use the `source-code-only` branch. If you want to run the application without compiling, use the `main` branch and find the executable in the `bin` directory.
+The repository contains all the necessary source code to build the application. After building, the executable will be located in the `build/Release` directory.
 
 ## Building from Source
 
@@ -59,10 +59,10 @@ If you are interested in just reviewing or modifying the code, use the `source-c
 3. Configure with CMake:
 
    ```bash
-   cmake .. -DCMAKE_PREFIX_PATH=C:/Qt5/5.15.2/msvc2019_64
+   cmake .. -DQt5_DIR="C:/Qt5/5.15.2/msvc2019_64/lib/cmake/Qt5"
    ```
 
-   Note: Adjust the Qt path according to your installation.
+   Note: Adjust the Qt path according to your installation. Make sure you have the Qt Charts module installed.
 
 4. Build the project:
 
@@ -71,6 +71,14 @@ If you are interested in just reviewing or modifying the code, use the `source-c
    ```
 
 5. The executable will be created in the `build/Release` directory.
+
+6. Deploy Qt dependencies:
+
+   ```bash
+   C:/Qt5/5.15.2/msvc2019_64/bin/windeployqt.exe --release build/Release/Owon1041.exe
+   ```
+
+   This will copy all necessary Qt DLLs and plugins to the build directory.
 
 #### Linux
 
@@ -91,8 +99,10 @@ If you are interested in just reviewing or modifying the code, use the `source-c
 3. Configure with CMake:
 
    ```bash
-   cmake ..
+   cmake .. -DCMAKE_PREFIX_PATH=/path/to/qt5
    ```
+
+   Note: Adjust the Qt path according to your installation. Make sure you have the Qt Charts module installed.
 
 4. Build the project:
 
@@ -101,6 +111,14 @@ If you are interested in just reviewing or modifying the code, use the `source-c
    ```
 
 5. The executable will be created in the `build` directory.
+
+6. Deploy Qt dependencies:
+
+   ```bash
+   /path/to/qt5/bin/linuxdeployqt Owon1041
+   ```
+
+   Note: You may need to install the `linuxdeployqt` tool separately.
 
 ### Dependencies
 
