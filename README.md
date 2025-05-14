@@ -19,18 +19,35 @@ This application provides a graphical interface for controlling and retrieving m
 
 ## Running the Application
 
-After building the application, you can run it directly from the `build/Release` directory. A shortcut `Owon1041.lnk` is provided in the root directory for convenience.
+### Pre-built Executable (No Building Required)
+
+This repository includes a pre-built executable that you can run directly without having to build the application yourself:
+
+1. Clone or download this repository
+2. Double-click the `Owon1041.lnk` shortcut in the root directory
+   - This shortcut points to the pre-built executable in the `build/Release` directory
+
+The application is ready to use immediately with all necessary dependencies included.
 
 ## Repository Structure
 
 This repository has two main branches:
 
 - `source-code-only`: Contains only the source code files needed for compilation
-- `main`: Contains the full project including build configurations
+- `main`: Contains the full project including the pre-built application
 
-The repository contains all the necessary source code to build the application. After building, the executable will be located in the `build/Release` directory.
+The `main` branch includes:
+
+- Complete source code
+- Pre-built executable in the `build/Release` directory
+- All necessary Qt DLLs and dependencies
+- A shortcut (`Owon1041.lnk`) for easy access to the application
+
+You can run the application directly without building it, or build it yourself from the source code.
 
 ## Building from Source
+
+**Note:** Building from source is optional. You can run the pre-built executable directly as described in the [Running the Application](#running-the-application) section.
 
 ### Prerequisites
 
